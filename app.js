@@ -60,3 +60,29 @@ runs.forEach((run, index) => {
 
   animate();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const teamToggles = document.querySelectorAll(".team-toggle");
+
+  teamToggles.forEach((button) => {
+    button.addEventListener("click", () => {
+      const bio = button.closest(".team-bio");
+      if (!bio) return;
+
+      const moreText = bio.querySelector(".team-bio-more");
+      if (!moreText) return;
+
+      const isOpen = !moreText.hasAttribute("hidden");
+
+      if (isOpen) {
+        moreText.setAttribute("hidden", "");
+        button.textContent = "Читати більше";
+        button.setAttribute("aria-expanded", "false");
+      } else {
+        moreText.removeAttribute("hidden");
+        button.textContent = "Сховати";
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+});

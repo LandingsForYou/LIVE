@@ -128,12 +128,8 @@ ul {
 }
 
 .logo {
-  font-family: var(--font-title);
-  font-size: 6vw;
-  line-height: 1;
-  font-weight: 100;
-  text-transform: uppercase;
-  color: var(--accent);
+  max-width: 260px;
+  margin-top: -20px;
 }
 
 .nav-list {
@@ -278,8 +274,8 @@ ul {
 }
 
 .hero-content h1 {
-  font-size: 10vw;
-  letter-spacing: 0.7vw;
+  font-size: 11vw;
+  letter-spacing: 0;
   line-height: 0.8;
   font-weight: 400;
   text-transform: uppercase;
@@ -295,6 +291,7 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  text-align: center;
 }
 
 .hero-name span {
@@ -338,6 +335,7 @@ ul {
   border-radius: 30px;
   font-weight: 600;
   backdrop-filter: blur(8px);
+  min-height: 50px;
 }
 
 .btn-hero {
@@ -562,10 +560,11 @@ ul {
 
 .about-list article > div span {
   font-family: var(--font-title);
-  font-size: 14px;
   line-height: 1.4;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  font-weight: 400;
+  font-size: 19px;
 }
 
 .about-list h3 {
@@ -599,6 +598,9 @@ ul {
 
 .about-list .pilot-text li {
   font-size: 18px;
+  line-height: 1.75;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .about-list article > div {
@@ -849,8 +851,9 @@ ul {
 
 .alert p {
   max-width: 720px;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: -0.02em;
+  font-size: 25px;
 }
 
 .alert p em {
@@ -863,7 +866,7 @@ ul {
 p.accent {
   text-transform: uppercase;
   color: var(--accent);
-  font-size: 25px;
+  font-size: 28px;
   line-height: 1.2;
 }
 
@@ -873,10 +876,8 @@ li .accent {
   line-height: 1.75;
 }
 
-/* кнопки */
-
 .alert .row {
-  margin-top: 40px;
+  margin-top: 0;
 }
 
 .alert .btn {
@@ -1732,4 +1733,68 @@ li .accent {
 .contacts .social-link:hover {
   background: var(--accent);
   border-color: var(--accent);
+}
+
+.cta-top h2 .accent {
+  color: var(--accent);
+  font-family: var(--font-title);
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 2px;
+}
+
+footer .logo {
+  margin: 50px auto 0;
+  max-width: 300px;
+}
+
+.team-bio {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-bio-more[hidden] {
+  display: none;
+}
+
+.team-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 14px 22px;
+  min-height: 48px;
+  border: 1px solid rgba(239, 131, 84, 0.55);
+  border-radius: 999px;
+  background: rgba(239, 131, 84, 0.08);
+  color: var(--accent);
+  font-family: var(--font-title);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.team-toggle:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.team-toggle:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  margin: auto;
+  background-color: transparent;
+}
+
+.team-bio .social-link {
+  margin-bottom: 10px;
 }
